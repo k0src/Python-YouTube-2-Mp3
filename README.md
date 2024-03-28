@@ -4,4 +4,4 @@ Simple GUI Youtube to Mp3 converter and YouTube thumbnail downloader.
 
 Enter a youtube.com or youtu.be URL to convert to Mp3, or download multiple videos by entering a playlist URL (list=), or a list of URLs seperated by commas ",".
 
-![img]("ttps://i.ibb.co/Yc98y1z/dddd.png")
+![]("https://i.ibb.co/Yc98y1z/dddd.png")
