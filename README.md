@@ -1,5 +1,7 @@
-# Python-YouTube-2-Mp3
+## Python-YouTube-2-Mp3
 
 Simple GUI Youtube to Mp3 converter and YouTube thumbnail downloader.
 
-![img](https://i.ibb.co/Twz9YFB/Screenshot-2024-03-28-at-1-46-19-AM.png)
+Enter a youtube.com or youtu.be URL to convert to Mp3, or download multiple videos by entering a playlist URL (list=), or a list of URLs seperated by commas ",".
+
+![img]("ttps://i.ibb.co/Yc98y1z/dddd.png")
