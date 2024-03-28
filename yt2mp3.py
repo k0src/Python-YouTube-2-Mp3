@@ -99,19 +99,27 @@ window.minsize(1000, 780)
 video_label_var = tk.StringVar()
 error_message = tk.StringVar()
 
-title = ttk.Label(window, text="YouTube To Mp3", font = 'Calibri 24 bold')
+title = ttk.Label(window, text="YouTube To Mp3", font = 'Calibri 24 bold', foreground='lightblue')
 title.pack(pady=5)
 
-subtitle2 = ttk.Label(window, text='Paste a YouTube Video or Playlist Link (or multiple videos seperated with ","):', font = 'Calibri 16')
+subtitle2 = ttk.Label(window, text='Paste a YouTube Video or Playlist Link (or multiple videos seperated with ","):', font = 'Calibri 14')
 subtitle2.pack(pady=5)
 
 download_string = tk.StringVar()
 download_entry = ttk.Entry(window, textvariable=download_string, width=50)
 download_entry.pack(pady=5)
 error_label = ttk.Label(window, text='', textvariable=error_message, font='Calibri 14', foreground='red')
-error_label.pack(pady=5)
-download_button = ttk.Button(window, text='Download', command=download)
-download_button.pack(pady=5)
+error_label.pack(pady=1)
+
+frame = ttk.Frame(window)
+
+download_button = ttk.Button(frame, text='Download', command=download)
+download_button.pack(side='left', pady=5, padx=8)
+download_thumb_button = ttk.Button(frame, text='Download Thumbnail', command=download_thumb)
+download_thumb_button.pack(side='right', pady=5, padx=8)
+download_thumb_button['state'] = tk.DISABLED
+
+frame.pack(pady=5)
 
 batch_thumbs_option_var = tk.IntVar(value=0)
 
@@ -119,7 +127,7 @@ batch_thumbs_option = ttk.Checkbutton(window, text='Batch Download Thumbnails', 
 batch_thumbs_option.pack(pady=5)
 
 
-video_thumb_label = ttk.Label(window, text="Video Thumbnail:", font='Calibri 18')
+video_thumb_label = ttk.Label(window, text="Video Thumbnail:", font='Calibri 16')
 video_thumb_label.pack(pady=5)
 
 video_thumb = ttk.Label(window)
@@ -127,9 +135,5 @@ video_thumb.pack(pady=5)
 
 video_label = ttk.Label(window, textvariable=video_label_var, font='Calibri 18')
 video_label.pack(pady=5)
-
-download_thumb_button = ttk.Button(window, text='Download Thumbnail', command=download_thumb)
-download_thumb_button.pack(pady=5)
-download_thumb_button['state'] = tk.DISABLED
 
 window.mainloop()
