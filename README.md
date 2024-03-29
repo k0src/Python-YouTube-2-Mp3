@@ -1,4 +1,4 @@
-## Python-YouTube-2-Mp3
+## pyYTmp3
 
 Simple GUI Youtube to Mp3 converter and YouTube thumbnail downloader.
 
